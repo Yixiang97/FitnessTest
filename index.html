@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Test App</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .main-container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gender-button {
+            flex: 1;
+            min-width: 120px;
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .gender-button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 480px) {
+            .gender-button {
+                font-size: 0.95em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Welcome to the Fitness Test calculator </h1>
+        <p>Select your gender to proceed:</p>
+        <div class="button-container">
+            <button class="gender-button" id="maleButton" aria-label="Select Male">Male</button>
+            <button class="gender-button" id="femaleButton" aria-label="Select Female">Female</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for navigation
+        document.getElementById('maleButton').addEventListener('click', () => {
+            window.location.href = 'male.html'; // Redirect to male calculator
+        });
+
+        document.getElementById('femaleButton').addEventListener('click', () => {
+            window.location.href = 'female.html'; // Redirect to female calculator
+        });
+    </script>
+</body>
+</html>
